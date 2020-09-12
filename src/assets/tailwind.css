@@ -1,0 +1,24 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.btn {
+  @apply py-2 px-4 rounded;
+}
+
+.btn-blue {
+  @apply bg-blue-400 text-white;
+}
+.gradient-bg {
+  background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.gradient-purpleCard{
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+}
