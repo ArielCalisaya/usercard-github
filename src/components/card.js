@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Card = () => {
+const Card = (props) => {
+
+    const {userName} = props
+
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    const apiURL = "https://api.github.com/users/ArielCalisaya";
+    const apiURL = `https://api.github.com/users/${userName}`;
     axios.get(apiURL).then((res) => {
       console.log(res.data);
       setUser(res.data);
@@ -13,7 +16,7 @@ const Card = () => {
     return () => {
       //
     };
-  }, []);
+  }, [userName]);
 
   //   const getUser = (user) => {
   //     const apiURL = "https://api.github.com/users/"+ user;
@@ -22,10 +25,13 @@ const Card = () => {
   //     });
   //   }
 
-  console.log(user);
+//   WOOOOOOOORKSSS YESSSSSSSSSSSS!!!
   return (
     <div>
-      <input type="text" placeholder="Ingresar usuario" />
+        <p>userNameKey: {userName}</p>
+
+
+
       <p>{user.name}</p>
       <div>
         <img src={user.avatar_url} alt="user-avatar" />
