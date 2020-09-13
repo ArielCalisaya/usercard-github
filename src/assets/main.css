@@ -19636,30 +19636,96 @@ video {
   animation: bounce 1s infinite;
 }
 
-.btn {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-}
-
-.btn-blue {
-  --bg-opacity: 1;
-  background-color: #63b3ed;
-  background-color: rgba(99, 179, 237, var(--bg-opacity));
-  --text-opacity: 1;
-  color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
-}
-
 .gradient-bg {
-  background: #41295a;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #41295a; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.gradient-purpleCard{
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+input {
+  background-color: #4c2885;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+input::placeholder{
+  color: #bbbbbb;
+}
+
+input:focus {
+  outline: none;
+}
+
+.avatar {
+  height: auto;
+  width: auto;
+  border: 10px solid #41295a;
+  border-radius: 50%;
+  max-width: 170px;
+}
+
+.card {
+  display: flex;
+  background-color: #4c2885;
+  background-image: linear-gradient(135deg, #4c2885 0%, #764ba2 80%);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+  0 15px 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 800px;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info .info {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  width: 300px;
+  max-width: 400px;
+}
+
+/* .user-info ul li {
+  display: flex;
+  align-items: center;
+} */
+
+.user-info ul strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  background-color: #2a2a72;
+  border-radius: 5px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
 @media (min-width: 640px) {
