@@ -16,14 +16,13 @@ function App() {
   };
 
   return (
-    <section className="gradient-bg min-h-screen text-white flex justify-center items-center flex-col">
-      <div>
+    <div className="gradient-bg min-h-screen text-white flex justify-center items-center flex-col">
         <form onSubmit={handleSubmit(onSubmit)} className="text-center">
           {errors.searchUser && errors.searchUser.type === "required" && (
             <p>It's Required some text to find User!</p>
           )}
           <input
-            className="text-black input-key-search text-white"
+            className="input-key-search text-white mb-4 mt-4"
             name="searchUser"
             type="text"
             placeholder="Search Github User"
@@ -31,8 +30,7 @@ function App() {
           />
         </form>
         {username === "" ? null : <Card userName={username} />}
-      </div>
-    </section>
+    </div>
   );
 }
 

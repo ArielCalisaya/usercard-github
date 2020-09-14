@@ -20,13 +20,11 @@
 
 
 input {
+  @apply mt-8 mb-8 p-4 text-base;
   background-color: #4c2885;
   border-radius: 10px;
   border: 2px solid #ffffff;
   font-family: inherit;
-  font-size: 1rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
 
 }
 
@@ -46,16 +44,18 @@ input:focus {
 }
 
 .card {
-  @apply flex;
+  @apply flex p-8 pl-6 max-w-5xl;
   background-color: #4c2885;
   background-image: linear-gradient(135deg, #4c2885 0%, #764ba2 80%);
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
   0 15px 40px rgba(0, 0, 0, 0.1);
-  padding: 3rem;
-  max-width: 800px;
 }
 
+
+/* .info {
+  @apply flex m-2;
+} */
 .img-container {
   display: flex;
   align-items: center;
@@ -76,11 +76,12 @@ input:focus {
   width: 300px;
   max-width: 400px;
 }
-
-/* .user-info ul li {
-  display: flex;
-  align-items: center;
-} */
+.font-code {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.purple-shadow{
+ @apply bg-purple-800 .bg-opacity-75;
+}
 .user-info ul strong {
   font-size: 0.9rem;
   margin-left: 0.5rem;
