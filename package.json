@@ -1,7 +1,16 @@
 {
   "name": "github-user-things",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.1.0",
+  "private": false,
+  "author": {
+    "name": "ArielCalisaya",
+    "email": "calisayaariel62@gmail.com",
+    "url": "https://github.com/ArielCalisaya"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/ArielCalisaya/usercard-github"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

@@ -18,17 +18,15 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 input {
   @apply mt-8 mb-8 p-4 text-base;
   background-color: #4c2885;
   border-radius: 10px;
   border: 2px solid #ffffff;
   font-family: inherit;
-
 }
 
-input::placeholder{
+input::placeholder {
   color: #bbbbbb;
 }
 
@@ -49,9 +47,8 @@ input:focus {
   background-image: linear-gradient(135deg, #4c2885 0%, #764ba2 80%);
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-  0 15px 40px rgba(0, 0, 0, 0.1);
+    0 15px 40px rgba(0, 0, 0, 0.1);
 }
-
 
 /* .info {
   @apply flex m-2;
@@ -77,10 +74,11 @@ input:focus {
   max-width: 400px;
 }
 .font-code {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
 }
-.purple-shadow{
- @apply bg-purple-800 .bg-opacity-75;
+.purple-shadow {
+  @apply bg-purple-800 .bg-opacity-75;
 }
 .user-info ul strong {
   font-size: 0.9rem;
