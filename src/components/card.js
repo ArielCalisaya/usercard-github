@@ -100,3 +100,6 @@ const Card = (props) => {
 };
 
 export default Card;
+
+
+// Falta responsividad mobile
