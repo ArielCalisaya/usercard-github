@@ -82,17 +82,29 @@ const Card = (props) => {
         <ul className="repos contents">
           {repository.map((repo, key) => {
             return (
-              <a
-                key={key}
-                href={repo.html_url}
-                rel="noopener noreferrer"
-                target="_blank"
-                className="repo"
-              >
-                {repo.name}
-              </a>
+              <>
+                <a
+                  key={key}
+                  href={repo.html_url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="repo"
+                >
+                  {repo.name}
+                </a>
+              </>
             );
           })}
+          {user.public_repos >= 30 ? (
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              className="repo"
+              href={`https://github.com/${user.login}?tab=repositories`}
+            >
+              more...
+            </a>
+          ) : null}
         </ul>
       </div>
     </div>
@@ -100,6 +112,5 @@ const Card = (props) => {
 };
 
 export default Card;
-
 
 // Falta responsividad mobile

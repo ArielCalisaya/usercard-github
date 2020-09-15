@@ -42,7 +42,7 @@ input:focus {
 }
 
 .card {
-  @apply flex p-8 pl-6 max-w-5xl;
+  @apply flex p-8 pl-4 max-w-5xl;
   background-color: #4c2885;
   background-image: linear-gradient(135deg, #4c2885 0%, #764ba2 80%);
   border-radius: 20px;
