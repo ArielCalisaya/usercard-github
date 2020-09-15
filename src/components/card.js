@@ -6,6 +6,7 @@ const Card = (props) => {
 
   const [user, setUser] = useState([]);
   const [repository, setRepo] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const userAPI = `https://api.github.com/users/${userName}`;
@@ -15,29 +16,33 @@ const Card = (props) => {
     axios
       .get(userAPI)
       .then((res) => {
-        console.log(res.data);
-
         setUser(res.data);
+      })
+      .then(() => {
+        axios
+          .get(reposAPI)
+          .then((res) => {
+            setRepo(res.data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
+        return () => {
+          //
+        };
       })
       .catch((err) => {
         console.log(err);
       });
 
     // GitHub Repository Api
-    axios
-      .get(reposAPI)
-      .then((res) => {
-        setRepo(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    return () => {
-      //
-    };
   }, [userName]);
 
-  return (
+  return loading ? (
+    <p>fetching data...</p>
+  ) : (
     <div className="card pl-6 mb-8 mt-8">
       <div className="img-container">
         <img
@@ -82,17 +87,15 @@ const Card = (props) => {
         <ul className="repos contents">
           {repository.map((repo, key) => {
             return (
-              <>
-                <a
-                  key={key}
-                  href={repo.html_url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="repo"
-                >
-                  {repo.name}
-                </a>
-              </>
+              <a
+                key={key}
+                href={repo.html_url}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="repo"
+              >
+                {repo.name}
+              </a>
             );
           })}
           {user.public_repos >= 30 ? (

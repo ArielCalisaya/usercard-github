@@ -87,10 +87,10 @@ input:focus {
 .repo {
   background-color: #2a2a72;
   border-radius: 5px;
+  padding: 0.25rem 0.5rem;
   display: inline-block;
   color: #ffffff;
   font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   text-decoration: none;

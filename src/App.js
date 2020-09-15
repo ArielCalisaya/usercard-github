@@ -15,6 +15,7 @@ function App() {
     setUsername(data.searchUser);
   };
 
+  // Home page that returns a input and render the Card component
   return (
     <div className="gradient-bg min-h-screen text-white flex justify-center items-center flex-col">
         <form onSubmit={handleSubmit(onSubmit)} className="text-center">
